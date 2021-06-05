@@ -10,7 +10,7 @@
     },
     "scripts": {
         "prebuild": "rimraf dist",
-        "build": "node dist/main",
+        "build": "nest build",
         "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
         "start": "node dist/main",
         "start:dev": "nest start --watch",
