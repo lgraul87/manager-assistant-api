@@ -12,9 +12,6 @@ export class Candidate {
     lastName: string;
 
     @Column()
-    dni: string;
-
-    @Column()
     email: string;
 
     @Column()
@@ -30,13 +27,10 @@ export class Candidate {
     technology: string;
 
     @Column()
-    experience: Date;
+    experience: string;
 
     @Column()
     isRemote: boolean;
-
-    @Column()
-    photo: string;
 
     @Column()
     comments: string;

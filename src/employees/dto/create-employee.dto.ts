@@ -6,14 +6,13 @@ export interface CreateEmployeeDto {
     phone: string;
     city: string;
     technology: string;
-    experience: Date;
+    experience: string;
     isRemote: boolean;
     salary: number;
     position: string;
-    seniority: Date;
+    seniority: string;
     ssNumber: string;
     iban: string;
-    photo: string;
     comments: string;
     linkedIn: string;
     noticePeriod: number;

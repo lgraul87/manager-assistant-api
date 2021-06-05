@@ -27,7 +27,7 @@ export class Employee {
     technology: string;
 
     @Column()
-    experience: Date;
+    experience: string;
 
     @Column()
     isRemote: boolean;
@@ -39,7 +39,7 @@ export class Employee {
     position: string;
 
     @Column()
-    seniority: Date;
+    seniority: string;
 
     @Column()
     ssNumber: string;
@@ -55,8 +55,4 @@ export class Employee {
 
     @Column()
     comments: string;
-
-    @Column()
-    photo: string;
-
 }

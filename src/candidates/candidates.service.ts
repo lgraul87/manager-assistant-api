@@ -3,8 +3,8 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 
 import { Candidate } from './entities/candidate.entity';
-import { CreateCandidateDto } from './_dtos/create-candidate.dto';
-import { UpdateCandidateDto } from './_dtos/update-candidate.dto';
+import { CreateCandidateDto } from './dtos/create-candidate.dto';
+import { UpdateCandidateDto } from './dtos/update-candidate.dto';
 
 @Injectable()
 export class CandidatesService {
@@ -29,7 +29,6 @@ export class CandidatesService {
     const candidateToUpdate = await this.candidatesRepository.findOne(id);
     candidateToUpdate.name = updateCandidateDto.name ?? candidateToUpdate.name;
     candidateToUpdate.lastName = updateCandidateDto.lastName ?? candidateToUpdate.lastName;
-    candidateToUpdate.dni = updateCandidateDto.dni ?? candidateToUpdate.dni;
     candidateToUpdate.email = updateCandidateDto.email ?? candidateToUpdate.email;
     candidateToUpdate.phone = updateCandidateDto.phone ?? candidateToUpdate.phone;
     candidateToUpdate.isAvailable = updateCandidateDto.isAvailable ?? candidateToUpdate.isAvailable;
@@ -37,7 +36,6 @@ export class CandidatesService {
     candidateToUpdate.technology = updateCandidateDto.technology ?? candidateToUpdate.technology;
     candidateToUpdate.experience = updateCandidateDto.experience ?? candidateToUpdate.experience;
     candidateToUpdate.isRemote = updateCandidateDto.isRemote ?? candidateToUpdate.isRemote;
-    candidateToUpdate.photo = updateCandidateDto.photo ?? candidateToUpdate.photo;
     candidateToUpdate.linkedIn = updateCandidateDto.linkedIn ?? candidateToUpdate.linkedIn;
     candidateToUpdate.comments = updateCandidateDto.comments ?? candidateToUpdate.comments;
     candidateToUpdate.noticePeriod = updateCandidateDto.noticePeriod ?? candidateToUpdate.noticePeriod;

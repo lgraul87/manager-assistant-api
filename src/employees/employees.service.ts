@@ -30,7 +30,7 @@ export class EmployeesService {
     const employeeToUpdate = await this.employeesRepository.findOne(id);
     employeeToUpdate.name = updateEmployeeDto.name ?? employeeToUpdate.name;
     employeeToUpdate.lastName = updateEmployeeDto.lastName ?? employeeToUpdate.lastName;
-    employeeToUpdate.dni = updateEmployeeDto.lastName ?? employeeToUpdate.lastName;
+    employeeToUpdate.dni = updateEmployeeDto.lastName ?? employeeToUpdate.dni;
     employeeToUpdate.email = updateEmployeeDto.email ?? employeeToUpdate.email;
     employeeToUpdate.phone = updateEmployeeDto.phone ?? employeeToUpdate.phone;
     employeeToUpdate.city = updateEmployeeDto.city ?? employeeToUpdate.city;
@@ -42,7 +42,6 @@ export class EmployeesService {
     employeeToUpdate.seniority = updateEmployeeDto.seniority ?? employeeToUpdate.seniority;
     employeeToUpdate.ssNumber = updateEmployeeDto.ssNumber ?? employeeToUpdate.ssNumber;
     employeeToUpdate.iban = updateEmployeeDto.iban ?? employeeToUpdate.iban;
-    employeeToUpdate.photo = updateEmployeeDto.photo ?? employeeToUpdate.photo;
     employeeToUpdate.comments = updateEmployeeDto.comments ?? employeeToUpdate.comments;
     employeeToUpdate.linkedIn = updateEmployeeDto.linkedIn ?? employeeToUpdate.linkedIn;
     employeeToUpdate.noticePeriod = updateEmployeeDto.noticePeriod ?? employeeToUpdate.noticePeriod;

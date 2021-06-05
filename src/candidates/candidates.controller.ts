@@ -1,7 +1,7 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Param, Delete, Put } from '@nestjs/common';
 import { CandidatesService } from './candidates.service';
-import { CreateCandidateDto } from './_dtos/create-candidate.dto';
-import { UpdateCandidateDto } from './_dtos/update-candidate.dto';
+import { CreateCandidateDto } from './dtos/create-candidate.dto';
+import { UpdateCandidateDto } from './dtos/update-candidate.dto';
 
 @Controller('candidates')
 export class CandidatesController {
@@ -22,7 +22,7 @@ export class CandidatesController {
     return this.candidatesService.findOne(id);
   }
 
-  @Patch(':id')
+  @Put(':id')
   update(@Param('id') id: string, @Body() updateCandidateDto: UpdateCandidateDto) {
     return this.candidatesService.update(id, updateCandidateDto);
   }
