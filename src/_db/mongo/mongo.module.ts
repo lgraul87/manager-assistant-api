@@ -9,11 +9,10 @@ import { User } from 'src/users/entities/user.entity';
     imports: [
         TypeOrmModule.forRoot({
             type: 'mongodb',
-            host: process.env.HOST,
-            port: 27017,
-            database: process.env.DB,
-            username: process.env.USER_DB,
-            password: process.env.PASS_DB,
+            url: `mongodb+srv://${process.env.USER_DB}:${process.env.PASS_DB}}@${process.env.HOST}/${process.env.DB}`,
+            w: 'majority',
+            ssl: true,
+            authSource: 'admin',
             entities: [User, Candidate, Employee],
             synchronize: true,
         }),
