@@ -9,7 +9,7 @@ import { User } from 'src/users/entities/user.entity';
     imports: [
         TypeOrmModule.forRoot({
             type: 'mongodb',
-            url: `mongodb+srv://${process.env.USER_DB}:${process.env.PASS_DB}@${process.env.HOST}/${process.env.DB}`,
+            url: `mongodb+srv://raulDB:1gradosuperior@cluster0.18yev.mongodb.net/manager-assistant-db`,
             w: 'majority',
             ssl: true,
             authSource: 'admin',
