@@ -18,11 +18,5 @@ async function bootstrap() {
 
   const port: number = parseInt(`${process.env.PORT}`) || 3000;
   await app.listen(port);
-
-  console.log('HOST', process.env.HOST);
-  console.log('PORT', process.env.PORT);
-  console.log('DB', process.env.DB);
-  console.log('USER_DB', process.env.USER_DB);
-  console.log('PASS_DB', process.env.PASS_DB);
 }
 bootstrap();
