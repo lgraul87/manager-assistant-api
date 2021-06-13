@@ -34,9 +34,11 @@ $ npm install
 
 ## Running the app
 
+Because this app is deployed in `Heroku` under free plan, `npm start` will NOT work as expected. Remember to `run npm run` start:dev to run the app in local
+
 ```bash
 # development
-$ npm run start
+$ npm run start:dev
 
 # watch mode
 $ npm run start:dev
